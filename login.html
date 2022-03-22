@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    <title>Mi primer proyecto/login</title>
+    <style>
+        :root {
+    --very-light-pink: #C7C7C7;
+    --text-input-field: #F7F7F7;
+    --hospital-green: #ACD9B2;
+    --white:#FFFFFF;
+    --black: #000000;
+    --sm:1.4rem;
+    --md:1.6rem;
+    --lg:1.8rem;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+.login{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items:center;
+}
+.form-container{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 300px;
+}
+.logo{
+    width: 200px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    justify-self: center;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.label{
+    font-size: var(--sm);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.input{
+    background-color: var(--text-input-field);
+    border: none;
+    border-radius: 8px;
+    height: 30px;
+    font-size: var(--md);
+    padding: 6px;
+    width: 100%;
+}
+.primary-button{
+    background-color: var(--hospital-green);
+    border-radius: 8px;
+    border:none;
+    color:var(--white);
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.forgot{
+    font-size: var(--sm);
+    color: var(--hospital-green);
+    text-decoration: none;
+    text-align: center;
+}
+.form a{
+    text-decoration: none;
+    color: var(--hospital-green);
+}
+.secondary-button{
+    background-color: var(--white);
+    border-radius: 8px;
+    border-color: var(--hospital-green);
+    border:solid 1px;
+    color:var(--hospital-green);
+    height: 50px;
+    width: inherit;
+    cursor: pointer;
+    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    justify-self: center;
+}
+
+@media(min-width:600px){
+    .logo{
+        display: none;
+    }
+    .secondary-button{
+        position: relative;
+    }
+    
+}
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+        <figure class="logo">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" width="100%" >
+        </figure>
+    
+
+        <form action="/" class="form">
+            <label for="email" class="label">
+                <span class="text">Email address</span>
+                <input type="email" id="email" placeholder="your email" class="input input-email" autocomplete="email" required>
+            </label>
+            <label for="password" class="label">
+                <span>Password</span><br>
+                <input type="password" id="password" placeholder="*******" class="input input-password" required>
+            </label>
+            <input type="submit" value="Login" class="primary-button login-button">
+            <p class="forgot"><a  href="/">Forgot my password</a></p>
+        </form>
+        <button class="secondary-button signup-button">Sign up</button>
+    </div>
+    </div>
+</body>
+</html>
