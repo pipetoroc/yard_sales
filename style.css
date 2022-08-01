@@ -19,6 +19,9 @@ html{
 body{
     font-family: 'Quicksand', sans-serif;
 }
+.inactive{
+    display: none;
+}
 nav{
     display: flex;
     justify-content: space-between;
@@ -56,9 +59,10 @@ nav{
     color: var(--hospital-green);
 }
 .navbar-email{
+    margin-right: 12px;
     font-size: var(--sm);
     color: var(--very-light-pink);
-    margin-right: 12px;
+    cursor: pointer;
 }
 .navbar-shopping-cart{
     position: relative;
