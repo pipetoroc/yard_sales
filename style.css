@@ -1,3 +1,4 @@
+/*General */
 :root {
 --very-light-pink: #C7C7C7;
 --text-input-field: #F7F7F7;
@@ -19,6 +20,7 @@ html{
 body{
     font-family: 'Quicksand', sans-serif;
 }
+/*Desktop-Menu*/
 .inactive{
     display: none;
 }
@@ -85,11 +87,12 @@ nav{
     position: absolute;
     top: 60px;
     right: 60px;
-    width: 100px;
+    /*width: 100px;*/
     height: auto;
     padding: 20px 20px 0 20px;
+    font-size: var(--md);
     border: 1px solid var(--very-light-pink);
-    border-radius: 6x;
+    border-radius: 6px;
     background-color: var(--white);
 }
 .desktop-menu ul{
@@ -115,8 +118,44 @@ nav{
     display: inline-block;
     margin-bottom: 20px;
 }
+/*Mobile-Menu*/
+.mobile-menu{
+    position: absolute;
+    top: 60px;
+    padding: 10px;
+}
+.mobile-menu a{
+    text-decoration: none;
+    color: var(--black);
+    font-weight: bold;
+    font-size: var(--md);
+    margin-bottom: 24px;
+}
+.mobile-menu ul{
+    list-style: none;
+    margin-top: 24px;
+}
+.mobile-menu ul:nth-child(1){
+    border-bottom: 1px solid var(--very-light-pink);
+}
+.mobile-menu ul:last-child{
+    position: absolute;
+     bottom: -5px;
+}
+.mobile-menu ul li{
+    margin-bottom: 14px;
+}
+.mobile-menu .email{
+    font-size: var(--sm);
+    font-weight: 300;
+}
+.mobile-menu .sign-out{
+    padding: 14px;
+    color: var(--hospital-green);
+    font-size: var(--sm);
+}
 
-@media (max-width:600px){
+@media (max-width:640px){
     .menu{
         display: block;
     }
@@ -124,6 +163,14 @@ nav{
         display: none;
     }
     .navbar-email{
+        display: none;
+    }
+    .desktop-menu{
+        display: none;
+    }
+}
+@media(min-width:640px){
+    .mobile-menu{
         display: none;
     }
 }
