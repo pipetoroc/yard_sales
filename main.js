@@ -20,9 +20,11 @@ function toggleDesktopMenu() {
 }
 
 function toggleMobileMenu(){
-   const isMobileMenuClosed = productDetail.classList.contains('inactive');
+   const mobileMenuClosed = mobileMenu.classList.contains('inactive');
+   //const isProductDetailClosed = productDetail.classList.contains('inactive');
 
-   if(!isMobileMenuClosed){
+   if(mobileMenuClosed){
+      mobileMenu.classList.add('inactive')
       productDetail.classList.add('inactive')
    }
    mobileMenu.classList.toggle('inactive');
