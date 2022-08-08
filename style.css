@@ -278,7 +278,7 @@ nav{
 .payment-detail{
     position: absolute;
     right: 0;
-    width: 310px;
+    /* width: 100%; */
     padding-bottom: 24px;
     background-color: var(--white);
 }
@@ -382,5 +382,12 @@ nav{
     }
     .desktop-menu{
         display: none;
+    }
+}
+@media(max-width:600px){
+    .payment-detail{
+        width: 100%;
+        object-fit: contain;
+        
     }
 }
