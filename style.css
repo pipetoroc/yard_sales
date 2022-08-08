@@ -276,20 +276,21 @@ nav{
 
 /* Payment Info */
 .payment-detail{
-    width: 360px;
-    padding-bottom: 24px;
     position: absolute;
     right: 0;
+    width: 310px;
+    padding-bottom: 24px;
+    background-color: var(--white);
 }
 .product-detail-close{
-    background-color: var(--white);
-    height: 30px;
-    width: 30px;
     position: absolute;
     top: 24px;
     left: 24px;
-    z-index: 2;
+    height: 30px;
+    width: 30px;
     padding: 8px;
+    background-color: var(--white);
+    z-index: 2;
     border-radius: 50%;
 }
 .product-detail-close:hover{
@@ -305,9 +306,9 @@ nav{
     margin: 0 24px;
 }
 .payment-info p:nth-child(1){
+    margin-bottom: 4px;
     font-weight: bold;
     font-size: var(--md);
-    margin-bottom: 4px;
 }
 .payment-info p:nth-child(2){
     color: var(--very-light-pink);
@@ -315,20 +316,20 @@ nav{
     margin-bottom: 36px;
 }
 .payment-info p:nth-child(3){
-    color: var(--very-light-pink);
-    font-size: var(--sm);
     margin-bottom: 36px;
+    font-size: var(--sm);
+    color: var(--very-light-pink);
 }
 .primary-button{
-    background-color:var(--hospital-green);
+    height: 50px;
+    width: 100%;
+    font-size: var(--md);
+    font-weight: bold;
     border-radius: 8px;
     border: none;
     color: var(--white);
-    width: 100%;
+    background-color:var(--hospital-green);
     cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    height: 50px;
 }
 .add-to-cart-button{
     display: flex;
